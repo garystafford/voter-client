@@ -14,6 +14,8 @@ Running `grunt test` will run the unit tests with karma.
 ## Installation
 
 ```text
+# https://github.com/yeoman/generator-angular#readme
+
 yo angular voter-client
 
      _-----_
