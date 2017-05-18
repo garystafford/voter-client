@@ -37,18 +37,20 @@
             <table class="table table-bordered table-striped table-sm">
               <thead>
               <tr>
-                <th class="text">Candidate</th>
+                <th class="text-sm-center">#</th>
+                <th class="text-sm-center">Candidate</th>
                 <th class="text-sm-center">Votes</th>
               </tr>
               </thead>
               <tbody>
               <tr ng-repeat="result in results.data.results | orderBy:'-votes'"
                   ng-class="{'winners': result.votes == winnersVotes.data.votes}">
+                <td class="text-sm-center">{{ $index+1 }}</td>
                 <td>{{ result.candidate }}</td>
                 <td class="text-sm-right">{{ result.votes }}</td>
               </tr>
               <tfoot class="total">
-              <td>Total</td>
+              <td class="text-sm-right" colspan="2">Total</td>
               <td class="text-sm-right"><span ng-bind=resultsCount.data.votes></span></td>
               </tfoot>
               </tbody>
