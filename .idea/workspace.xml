@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b1817b17-8f8d-408a-bbe6-7e6519d24e97" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gruntfile.js" afterPath="$PROJECT_DIR$/Gruntfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/server.js" afterPath="$PROJECT_DIR$/app/server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/protractor/voter-spec.js" afterPath="$PROJECT_DIR$/test/protractor/voter-spec.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/spec/controllers/voter.js" afterPath="$PROJECT_DIR$/test/spec/controllers/voter.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/spec/services/voter.js" afterPath="$PROJECT_DIR$/test/spec/services/voter.js" />
-    </list>
+    <list default="true" id="b1817b17-8f8d-408a-bbe6-7e6519d24e97" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -393,12 +386,12 @@
       <workItem from="1495027464291" duration="33000" />
       <workItem from="1495027566413" duration="17304000" />
       <workItem from="1495052796098" duration="32000" />
-      <workItem from="1495052848466" duration="28124000" />
+      <workItem from="1495052848466" duration="28155000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47648000" />
+    <option name="totallyTimeSpent" value="47679000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
