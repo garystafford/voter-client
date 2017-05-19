@@ -7,11 +7,11 @@ RUN set -ex \
   && apk update \
   && apk upgrade \
   && apk add git unzip
-RUN mkdir /client \
+RUN mkdir client \
   && git clone --depth 1 --branch build-artifacts \
       "https://github.com/garystafford/voter-client.git" /client \
   && cd /client \
-  && unzip dist-voter-client-0.3.*.zip \
-  && mv dist-voter-client-0.3.*.zip voter-service.jar
+  && unzip *.zip \
+  && mv dist/* . \
 
   CMD [ "node", "server.js" ]
