@@ -40,12 +40,18 @@ lar-route.js, angular-sanitize.js, angular-touch.js
 ## Commands
 
 ```bash
-# fix error
+# fix error with initial generated project
 npm install grunt-karma karma karma-phantomjs-launcher karma-jasmine jasmine-core phantomjs-prebuilt --save-dev
 
 yo angular:route voter
 yo angular:service voter
 
 grunt
+
+# uses 'serve-static'
 grunt serve
+
+# use 'aliv'
+grunt build && npm start
+
 ```

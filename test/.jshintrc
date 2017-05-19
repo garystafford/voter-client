@@ -13,6 +13,14 @@
   "unused": true,
   "globals": {
     "angular": false,
-    "inject": false
+    "describe": false,
+    "it": false,
+    "before": false,
+    "beforeEach": false,
+    "after": false,
+    "afterEach": false,
+    "inject": false,
+    "expect": false,
+    "spyOn": false
   }
 }

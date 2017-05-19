@@ -1,23 +1,27 @@
 'use strict';
 
-describe('Controller: VoterCtrl', function () {
+describe('voterClientApp', function() {
+  var _scope;
+  var CONTROLLER_NAME = 'VoterController';
 
-  // load the controller's module
   beforeEach(module('voterClientApp'));
 
-  var VoterCtrl,
-    scope;
+  var $controller;
 
-  // Initialize the controller and a mock scope
-  beforeEach(inject(function ($controller, $rootScope) {
-    scope = $rootScope.$new();
-    VoterCtrl = $controller('VoterCtrl', {
-      $scope: scope
-      // place here mocked dependencies
-    });
+  beforeEach(inject(function(_$controller_){
+    // The injector unwraps the underscores (_) from around the parameter names when matching
+    $controller = _$controller_;
   }));
 
-  it('should attach a list of awesomeThings to the scope', function () {
-    expect(VoterCtrl.awesomeThings.length).toBe(3);
+  describe('init', function() {
+    it('should create the controller correctly', inject(function($controller) {
+      $controller(CONTROLLER_NAME, {$scope: _scope});
+    }));
+  });
+
+  describe('onLoad', function() {
+    it('should load correctly', inject(function($controller) {
+      // ...
+    }));
   });
 });

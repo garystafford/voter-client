@@ -1,18 +1,27 @@
 'use strict';
 
-describe('Service: voter', function () {
+describe('VoterService', function() {
+  var _VoterService;
 
-  // load the service's module
-  beforeEach(module('voterClientApp'));
+  beforeEach(module('favColor'));
 
-  // instantiate service
-  var voter;
-  beforeEach(inject(function (_voter_) {
-    voter = _voter_;
+  beforeEach(inject(function($injector) {
+    _VoterService = $injector.get('VoterService');
   }));
 
-  it('should do something', function () {
-    expect(!!voter).toBe(true);
+  describe('instance', function() {
+    it('should have the right prop for the instance', function() {
+      var _something = new _VoterService();
+
+      expect(_something.something).toEqual(123);
+    });
   });
 
+  describe('isValid', function() {
+    it('should return true', function() {
+      var _something = new _VoterService();
+
+      expect(_something.isValid()).toBeTruthy();
+    });
+  });
 });
