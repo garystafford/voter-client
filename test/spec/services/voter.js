@@ -1,6 +1,6 @@
 'use strict';
 
-describe('VoterService', function() {
+xdescribe('VoterService', function() {
   var _VoterService;
 
   beforeEach(module('favColor'));

@@ -48,13 +48,18 @@ yo angular:service voter
 
 grunt
 
-# uses 'serve-static'
+# uses 'serve-static' for development
 grunt serve
 
-# use 'aliv'
+# uses 'aliv' for development
 grunt build && npm start
 
+# uses 'serve-static' for production
+grunt build && cd /dist
+node server.js
+
 # for Protractor testing
-webdriver-manager start
+webdriver-manager start # first terminal window
+protractor protractor.conf.js # second window
 
 ```

@@ -1,6 +1,6 @@
 'use strict';
 
-describe('voterClientApp', function() {
+xdescribe('voterClientApp', function() {
   var _scope;
   var CONTROLLER_NAME = 'VoterController';
 
