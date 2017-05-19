@@ -9,7 +9,7 @@ install:
 - npm install -g bower gulp-cli mocha
 - bower install
 script:
-- grunt biuld
+- grunt build
 - sh ./deploy_travisci.sh
 env:
   global:
