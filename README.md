@@ -54,4 +54,7 @@ grunt serve
 # use 'aliv'
 grunt build && npm start
 
+# for Protractor testing
+webdriver-manager start
+
 ```
