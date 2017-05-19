@@ -1,6 +1,6 @@
-FROM node:apline
+FROM node:alpine
 LABEL maintainer "Gary A. Stafford <garystafford@rochester.rr.com>"
-ENV REFRESHED_AT 2017-04-17
+ENV REFRESHED_AT 2017-05-19
 VOLUME /tmp
 EXPOSE 9090
 RUN set -ex \

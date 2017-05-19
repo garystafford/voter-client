@@ -8,7 +8,7 @@
 
 #set -x
 
-BRANCH=${2:-master}
+BRANCH=${2:-rabbitmq}
 
 zip -r dist-voter-client-0.3.${TRAVIS_BUILD_NUMBER}.zip dist/
 
