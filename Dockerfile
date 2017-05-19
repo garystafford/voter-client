@@ -13,5 +13,4 @@ RUN mkdir /client \
   && cd /client
 RUN unzip *.zip \
   && cd /dist
-
-  CMD [ "node", "server.js" ]
+CMD [ "node", "server.js" ]
