@@ -21,7 +21,7 @@ git commit -m "Deploy Travis CI Build #${TRAVIS_BUILD_NUMBER} artifacts to GitHu
 git push --force --quiet "https://${GH_TOKEN}@${GH_ARTIFACT_REPO}" master:build-artifacts
 
 # Builds immutable Docker Image, deploying the JAR, above.
-cd -
+# cd -
 docker login -u="${DOCKER_USERNAME}" -p="${DOCKER_PASSWORD}"
 
 set -ex
