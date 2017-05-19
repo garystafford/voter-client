@@ -10,18 +10,19 @@
 
 BRANCH=${2:-rabbitmq}
 
+cd client/
 zip -r dist-voter-client-0.3.${TRAVIS_BUILD_NUMBER}.zip dist/
 
 git init
 git config user.name "travis-ci"
 git config user.email "${COMMIT_AUTHOR_EMAIL}"
 
-git add dist-voter-client-0.3.${TRAVIS_BUILD_NUMBER}.zip
+git add *.zip
 git commit -m "Deploy Travis CI Build #${TRAVIS_BUILD_NUMBER} artifacts to GitHub"
 git push --force --quiet "https://${GH_TOKEN}@${GH_ARTIFACT_REPO}" master:build-artifacts
 
-# Builds immutable Docker Image, deploying the JAR, above.
-# cd -
+# Builds immutable Docker Image, deploying the ZIP, above.
+cd -
 docker login -u="${DOCKER_USERNAME}" -p="${DOCKER_PASSWORD}"
 
 set -ex
