@@ -11,7 +11,6 @@ RUN set -x \
 ENV NODE_ENV=production
 RUN npm install --production
 RUN npm install -g bower forever pm2 gulp-cli
-RUN bower install --allow-root --production --config.directory=bower_components
 
 RUN mkdir client \
   && git clone --depth 1 --branch build-artifacts \
@@ -21,6 +20,8 @@ RUN mkdir client \
   && pwd \
   && unzip *.zip \
   && cd dist
+
+RUN bower install --allow-root --production --config.directory=bower_components
 
 RUN pm2 start server.js \
   && pm2 save \
