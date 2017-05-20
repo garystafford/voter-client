@@ -21,12 +21,12 @@ RUN mkdir client \
   && unzip *.zip \
   && cd dist
 
+WORKDIR /client/dist
+
 RUN bower install --allow-root --production --config.directory=bower_components
 
 RUN pm2 start server.js \
   && pm2 save \
-  && pm2 startup \
-
-WORKDIR /client/dist
+  && pm2 startup
 
 CMD [ "pm2 start server.js" ]
