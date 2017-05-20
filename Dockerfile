@@ -1,16 +1,12 @@
 FROM node:alpine
 LABEL maintainer "Gary A. Stafford <garystafford@rochester.rr.com>"
-ENV REFRESHED_AT 2017-05-19
+ENV REFRESHED_AT 2017-05-20
 EXPOSE 9090
 
 RUN set -x \
   && apk update \
   && apk upgrade \
   && apk add git unzip
-
-ENV NODE_ENV=production
-RUN npm install --production
-RUN npm install -g bower forever pm2 gulp-cli
 
 RUN mkdir client \
   && git clone --depth 1 --branch build-artifacts \
@@ -23,7 +19,10 @@ RUN mkdir client \
 
 WORKDIR /client/dist
 
+ENV NODE_ENV=production
+RUN npm install --production
+RUN npm install -g bower forever pm2 gulp-cli
 RUN bower install --allow-root --production --config.directory=bower_components
 
 # CMD [ "pm2", "start", "server.js" ]
-CMD [ "npm", "start" ]
+CMD [ "node", "server.js" ]
