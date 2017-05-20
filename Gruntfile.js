@@ -23,7 +23,8 @@ module.exports = function (grunt) {
   // Configurable paths for the application
   var appConfig = {
     app: require('./bower.json').appPath || 'app',
-    dist: 'client/dist'
+    dist: 'client/dist',
+    root: '.'
   };
 
   // Define the configuration for all the tasks
@@ -375,15 +376,15 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           dot: true,
-          cwd: '<%= yeoman.app %>',
+          cwd: '<%= yeoman.root %>',
           dest: '<%= yeoman.dist %>',
-          src: 'server.js',
+          src: ['bower.json']
         }, {
           expand: true,
           dot: true,
           cwd: '<%= yeoman.app %>',
           dest: '<%= yeoman.dist %>',
-          src: 'bower.json',
+          src: 'server.js'
         }, {
           expand: true,
           dot: true,
