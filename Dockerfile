@@ -8,7 +8,10 @@ RUN set -x \
   && apk upgrade \
   && apk add git unzip
 
-RUN npm install npm install -g bower express
+ENV NODE_ENV=production
+RUN npm install --production
+RUN npm install -g bower forever pm2 gulp-cli
+RUN bower install --allow-root --production --config.directory=bower_components
 
 RUN mkdir client \
   && git clone --depth 1 --branch build-artifacts \
@@ -18,4 +21,11 @@ RUN mkdir client \
   && pwd \
   && unzip *.zip \
   && cd dist
-CMD [ "node", "server.js" ]
+
+RUN pm2 start server.js \
+  && pm2 save \
+  && pm2 startup \
+
+WORKDIR /client/dist
+
+CMD [ "pm2 start server.js" ]
