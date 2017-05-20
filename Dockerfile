@@ -14,15 +14,11 @@ RUN mkdir client \
   && cd client \
   && ls -ah \
   && pwd \
-  && unzip *.zip \
-  && cd dist
+  && unzip *.zip
 
 WORKDIR /client/dist
 
 ENV NODE_ENV=production
 RUN npm install --production
-RUN npm install -g bower forever pm2 gulp-cli
-RUN bower install --allow-root --production --config.directory=bower_components
 
-# CMD [ "pm2", "start", "server.js" ]
 CMD [ "node", "server.js" ]

@@ -20,7 +20,7 @@
       $scope.getCandidates = function () {
         VoterService.getCandidates()
           .then(function (response) {
-            console.log(response);
+            // console.log(response);
             $scope.candidates = response;
           }, function (error) {
             console.error(error);
@@ -31,7 +31,7 @@
         if ($scope.selected) {
           VoterService.postVote($scope.selected)
             .then(function (response) {
-              console.log(response);
+              // console.log(response);
               $scope.vote = response;
               $scope.GetResults();
               $scope.getResultsVotes();
@@ -46,7 +46,7 @@
       $scope.GetResults = function () {
         VoterService.getResults()
           .then(function (response) {
-            console.log(response);
+            // console.log(response);
             $scope.results = response;
           }, function (error) {
             console.error(error);
@@ -56,7 +56,7 @@
       $scope.getResultsVotes = function () {
         VoterService.getResultsVotes()
           .then(function (response) {
-            console.log(response);
+            // console.log(response);
             $scope.resultsCount = response;
           }, function (error) {
             console.error(error);
@@ -66,7 +66,7 @@
       $scope.getWinners = function () {
         VoterService.getWinners()
           .then(function (response) {
-            console.log(response);
+            // console.log(response);
             $scope.winners = response;
           }, function (error) {
             console.error(error);
@@ -76,7 +76,7 @@
       $scope.getWinnersVotes = function () {
         VoterService.getWinnersVotes()
           .then(function (response) {
-            console.log(response);
+            // console.log(response);
             $scope.winnersVotes = response;
           }, function (error) {
             console.error(error);

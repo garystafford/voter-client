@@ -378,7 +378,7 @@ module.exports = function (grunt) {
           dot: true,
           cwd: '<%= yeoman.root %>',
           dest: '<%= yeoman.dist %>',
-          src: ['package.json', 'bower.json']
+          src: ['package.json']
         }, {
           expand: true,
           dot: true,
