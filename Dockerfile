@@ -1,6 +1,6 @@
 FROM node:alpine
 LABEL maintainer "Gary A. Stafford <garystafford@rochester.rr.com>"
-ENV REFRESHED_AT 2017-05-19c
+ENV REFRESHED_AT 2017-05-19
 EXPOSE 9090
 
 RUN set -x \
@@ -25,8 +25,5 @@ WORKDIR /client/dist
 
 RUN bower install --allow-root --production --config.directory=bower_components
 
-RUN pm2 start server.js \
-  && pm2 save \
-  && pm2 startup
-
-CMD [ "pm2 start server.js" ]
+# CMD [ "pm2", "start", "server.js" ]
+CMD [ "npm", "start" ]
