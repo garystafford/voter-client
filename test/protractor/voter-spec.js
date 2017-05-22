@@ -5,7 +5,7 @@ describe('Voter Client SPA', function () {
   var request = require('request');
   var series = require('async/series');
   var requestJson = require('request-json');
-  var apiGateway = 'http://gateway:8080/';
+  var apiGateway = 'http://localhost:8080/';
   var client = requestJson.createClient(apiGateway);
   var election = '2016 Presidential Election';
   var data = {};
@@ -15,7 +15,7 @@ describe('Voter Client SPA', function () {
   // NOTE: First two calls remove all candidates and votes from voters database!
   series([
     function (callback) {
-      request(apiGateway + 'voter/candidates/drop', function (error, response, body) {
+      request.post(apiGateway + 'voter/candidates/drop', function (error, response, body) {
         console.log('voter/candidates/drop');
         console.log('error:', error); // Print the error if one occurred
         console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
@@ -24,7 +24,7 @@ describe('Voter Client SPA', function () {
       });
     },
     function (callback) {
-      request(apiGateway + 'voter/votes/drop', function (error, response, body) {
+      request.post(apiGateway + 'voter/votes/drop', function (error, response, body) {
         console.log('voter/votes/drop');
         console.log('error:', error); // Print the error if one occurred
         console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received

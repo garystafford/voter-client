@@ -20,7 +20,7 @@ services:
     ports:
     - 5900:5900/tcp
 
-  firefox:
+  node-firefox:
     image: "selenium/node-firefox-debug:latest"
     networks:
     - demo_overlay_net
