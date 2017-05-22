@@ -26,6 +26,7 @@
     "grunt-newer": "^1.1.0",
     "grunt-ng-annotate": "^3.0.0",
     "grunt-postcss": "^0.8.0",
+    "grunt-sonar-runner": "^2.4.8",
     "grunt-svgmin": "^4.0.0",
     "grunt-usemin": "^3.0.0",
     "grunt-wiredep": "^3.0.1",

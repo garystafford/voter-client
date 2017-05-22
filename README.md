@@ -43,6 +43,7 @@ lar-route.js, angular-sanitize.js, angular-touch.js
 # fix error with initial generated project
 npm install grunt-karma karma karma-phantomjs-launcher karma-jasmine jasmine-core phantomjs-prebuilt --save-dev
 
+# create components
 yo angular:route voter
 yo angular:service voter
 
@@ -62,4 +63,21 @@ node server.js
 webdriver-manager start # first terminal window
 protractor protractor.conf.js # second window
 
+# for Protractor with Docker
+docker-compose pull
+
+docker-compose \
+  -f docker-compose.yml \
+  -p voterstack up \
+  --force-recreate -d
+
+# http://localhost:4444/grid/console?config=true&configDebug=true
+# http://localhost:4444/grid/console
+docker run --rm -v /Users/garystafford/Documents/projects/voter-services/voter-client:/project caltha/protractor
+CONTAINER=$(docker run -d --network=voterstack_demo_overlay_net --name protractor -v /Users/garystafford/Documents/projects/voter-services/voter-client:/project --env MANUAL=yes caltha/protractor)
+docker exec -ti $CONTAINER sudo -i -u node bash
+docker exec -ti $CONTAINER bash
+
+# SonarQube SCA
+grunt sonarRunner
 ```

@@ -5,11 +5,11 @@ describe('Voter Client SPA', function () {
   var request = require('request');
   var series = require('async/series');
   var requestJson = require('request-json');
-  var apiGateway = 'http://localhost:8080/';
+  var apiGateway = 'http://gateway:8080/';
   var client = requestJson.createClient(apiGateway);
   var election = '2016 Presidential Election';
   var data = {};
-  var appUrl = 'http://localhost:9090/';
+  var appUrl = 'http://client:9090/';
 
   // Make Voter API synchronously to create test data
   // NOTE: First two calls remove all candidates and votes from voters database!
@@ -97,7 +97,6 @@ describe('Voter Client SPA', function () {
         // console.log('body:', body); // Print the JSON response payload
         callback(null, 'voter/simulation/db/election');
       });
-
     }
   ], function (err, results) {
     console.log(results);
@@ -105,6 +104,8 @@ describe('Voter Client SPA', function () {
 
   beforeEach(function () {
     browser.get(appUrl);
+    browser.driver.manage().window().maximize();
+    // browser.pause();
   });
 
   it('should display three candidate choices in drop-down', function () {
