@@ -8,7 +8,7 @@ services:
     depends_on:
     - selenium-hub
     environment:
-      MANUAL: yes
+      MANUAL: 'yes'
     volumes:
     - /Users/garystafford/Documents/projects/voter-services/voter-client:/project
 

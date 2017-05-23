@@ -74,10 +74,15 @@ docker-compose \
 
 # http://localhost:4444/grid/console?config=true&configDebug=true
 # http://localhost:4444/grid/console
-docker run --rm -v /Users/garystafford/Documents/projects/voter-services/voter-client:/project caltha/protractor
-CONTAINER=$(docker run -d --network=voterstack_demo_overlay_net --name protractor -v /Users/garystafford/Documents/projects/voter-services/voter-client:/project --env MANUAL=yes caltha/protractor)
-docker exec -ti $CONTAINER sudo -i -u node bash
-docker exec -ti $CONTAINER bash
+
+# Outdated instructions
+# docker run --rm -v /Users/garystafford/Documents/projects/voter-services/voter-client:/project caltha/protractor
+# CONTAINER=$(docker run -d --network=voterstack_demo_overlay_net --name protractor -v /Users/garystafford/Documents/projects/voter-services/voter-client:/project --env MANUAL=yes caltha/protractor)
+# docker exec -it $CONTAINER sudo -i -u node bash
+# docker exec -it $CONTAINER bash
+
+docker exec -it voterstack_protractor_1 bash
+npm install protractor -g # update to current version
 
 # SonarQube SCA
 grunt sonarRunner
