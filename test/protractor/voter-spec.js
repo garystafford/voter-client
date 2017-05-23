@@ -5,7 +5,7 @@ describe('Voter Client SPA', function () {
   var request = require('request');
   var series = require('async/series');
   var requestJson = require('request-json');
-  var apiGateway = 'http://localhost:8080/';
+  var apiGateway = 'http://gateway:8080/';
   var client = requestJson.createClient(apiGateway);
   var election = '2016 Presidential Election';
   var data = {};

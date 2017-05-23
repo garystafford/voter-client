@@ -64,6 +64,7 @@ webdriver-manager start # first terminal window
 protractor protractor.conf.js # second window
 
 # for Protractor with Docker
+# https://github.com/SeleniumHQ/docker-selenium
 docker-compose pull
 
 docker-compose \

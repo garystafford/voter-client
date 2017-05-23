@@ -1,12 +1,23 @@
 version: '3.0'
 
 services:
-  selenium-hub:
-    image: "selenium/hub:latest"
-    ports:
-    - 4444:4444/tcp
+  protractor:
+    image: "caltha/protractor:latest"
     networks:
     - demo_overlay_net
+    depends_on:
+    - selenium-hub
+    environment:
+      MANUAL: yes
+    volumes:
+    - /Users/garystafford/Documents/projects/voter-services/voter-client:/project
+
+  selenium-hub:
+    image: "selenium/hub:latest"
+    networks:
+    - demo_overlay_net
+    ports:
+    - 4444:4444/tcp
 
   node-chrome:
     image: "selenium/node-chrome-debug:latest"
