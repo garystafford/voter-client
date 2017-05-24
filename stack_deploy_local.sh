@@ -18,7 +18,7 @@ docker-compose -f docker-compose-local.yml pull
 
 docker-compose \
   -f docker-compose-local.yml \
-  -p teststack up \
+  -p demostack up \
   --force-recreate -d
 
 docker rm $(docker ps -a -f status=exited -q) || echo "No containers to delete..."
