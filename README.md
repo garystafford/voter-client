@@ -59,30 +59,23 @@ grunt build && npm start
 grunt build && cd /dist
 node server.js
 
-# for Protractor testing
+# local Protractor testing
 webdriver-manager start # first terminal window
-protractor protractor.conf.js # second window
+protractor protractor.conf.js # second terminal window
 
 # for Protractor with Docker
 # https://github.com/SeleniumHQ/docker-selenium
-docker-compose pull
 
-docker-compose \
-  -f docker-compose.yml \
-  -p voterstack up \
-  --force-recreate -d
+# install selenium stack
+PROJECT_PATH="/Users/garystafford/Documents/projects/voter-services/voter-client" \
+  && sh stack_deploy_local.sh ${PROJECT_PATH}
+
+# run tests
+PROTRACTOR_CONTAINER=$(docker ps | grep protractor | awk '{print $1}')
+docker exec -it ${PROTRACTOR_CONTAINER} protractor project/protractor.conf.js
 
 # http://localhost:4444/grid/console?config=true&configDebug=true
 # http://localhost:4444/grid/console
-
-# Outdated instructions
-# docker run --rm -v /Users/garystafford/Documents/projects/voter-services/voter-client:/project caltha/protractor
-# CONTAINER=$(docker run -d --network=voterstack_demo_overlay_net --name protractor -v /Users/garystafford/Documents/projects/voter-services/voter-client:/project --env MANUAL=yes caltha/protractor)
-# docker exec -it $CONTAINER sudo -i -u node bash
-# docker exec -it $CONTAINER bash
-
-docker exec -it voterstack_protractor_1 bash
-npm install protractor -g # update to current version
 
 # SonarQube SCA
 grunt sonarRunner
