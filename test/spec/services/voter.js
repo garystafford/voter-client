@@ -3,7 +3,7 @@
 xdescribe('VoterService', function() {
   var _VoterService;
 
-  beforeEach(module('favColor'));
+  beforeEach(module('voterClientApp'));
 
   beforeEach(inject(function($injector) {
     _VoterService = $injector.get('VoterService');
