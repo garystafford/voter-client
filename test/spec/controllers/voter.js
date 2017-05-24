@@ -44,7 +44,6 @@ describe('voterClientApp', function() {
 
       deferred.promise.then(function(data) {
         response = data;
-        console.log(data);
       });
 
       deferred.resolve('Returned OK!');
