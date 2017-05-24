@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b1817b17-8f8d-408a-bbe6-7e6519d24e97" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/spec/controllers/voter.js" afterPath="$PROJECT_DIR$/test/spec/controllers/voter.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/voter.js" afterPath="$PROJECT_DIR$/app/scripts/controllers/voter.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -28,7 +28,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>VoterCont</find>
       <find>VoterCon</find>
       <find>VoterCo</find>
       <find>VoterC</find>
@@ -58,6 +57,7 @@
       <find>yeoman.app</find>
       <find>,</find>
       <find>should do something...</find>
+      <find>= {}</find>
     </findStrings>
     <replaceStrings>
       <replace>VoterService</replace>
@@ -104,10 +104,10 @@
         <option value="$PROJECT_DIR$/test/protractor/voter-spec.js" />
         <option value="$PROJECT_DIR$/app/scripts/configFile.js" />
         <option value="$PROJECT_DIR$/test/karma.conf.js" />
-        <option value="$PROJECT_DIR$/app/scripts/controllers/voter.js" />
         <option value="$PROJECT_DIR$/test/spec/services/voter.js" />
         <option value="$PROJECT_DIR$/test/.jshintrc" />
         <option value="$PROJECT_DIR$/test/spec/controllers/voter.js" />
+        <option value="$PROJECT_DIR$/app/scripts/controllers/voter.js" />
       </list>
     </option>
   </component>
@@ -547,12 +547,12 @@
       <workItem from="1495052848466" duration="29651000" />
       <workItem from="1495222937550" duration="7726000" />
       <workItem from="1495396815205" duration="1980000" />
-      <workItem from="1495403192014" duration="14490000" />
+      <workItem from="1495403192014" duration="15463000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73371000" />
+    <option name="totallyTimeSpent" value="74344000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -897,16 +897,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/voter.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="16" column="20" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="20" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/services/voter.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -915,9 +905,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/voter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="17" column="25" lean-forward="false" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/spec/controllers/voter.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
+        <state relative-caret-position="690">
           <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
           <folding />
         </state>

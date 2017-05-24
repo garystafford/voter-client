@@ -10,12 +10,12 @@
 
   ng.module('voterClientApp')
     .controller('VoterController', ['$scope', 'VoterService', function ($scope, VoterService) {
-      $scope.candidates = {};
-      $scope.vote = {};
-      $scope.results = {};
-      $scope.resultsCount = {};
-      $scope.winners = {};
-      $scope.winnersVotes = {};
+      $scope.candidates;
+      $scope.vote;
+      $scope.results;
+      $scope.resultsCount;
+      $scope.winners;
+      $scope.winnersVotes;
 
       $scope.getCandidates = function () {
         VoterService.getCandidates()
