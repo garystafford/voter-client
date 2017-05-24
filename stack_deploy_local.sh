@@ -30,6 +30,3 @@ sleep 5
 docker ps
 
 echo "Script completed..."
-
-PROTRACTOR_CONTAINER=$(docker ps | grep protractor | awk '{print $1}')
-docker exec -it ${PROTRACTOR_CONTAINER} npm upgrade protractor -g

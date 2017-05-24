@@ -11,11 +11,15 @@ services:
       MANUAL: 'yes'
     volumes:
     - ${PROJECT_PATH}:/project
+    networks:
+    - demo_overlay_net
 
   selenium-hub:
     image: "selenium/hub:latest"
     ports:
     - 4444:4444/tcp
+    networks:
+    - demo_overlay_net
 
   node-chrome:
     image: "selenium/node-chrome-debug:latest"
@@ -26,6 +30,8 @@ services:
       HUB_PORT_4444_TCP_PORT: 4444
     ports:
     - 5900:5900/tcp
+    networks:
+    - demo_overlay_net
 
   node-firefox:
     image: "selenium/node-firefox-debug:latest"
@@ -36,3 +42,11 @@ services:
       HUB_PORT_4444_TCP_PORT: 4444
     ports:
     - 5901:5900/tcp
+    networks:
+    - demo_overlay_net
+
+networks:
+  demo_overlay_net:
+
+volumes:
+  demo_data_vol:
