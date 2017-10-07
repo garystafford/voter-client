@@ -70,7 +70,8 @@ protractor protractor.conf.js # second terminal window
 PROJECT_PATH="/Users/garystafford/Documents/projects/voter-services/voter-client" \
   && sh stack_deploy_local.sh ${PROJECT_PATH}
 
-# run tests
+# run protractor tests from within protractor container
+# against running voter client in another container (tests running app)
 PROTRACTOR_CONTAINER=$(docker ps | grep protractor | awk '{print $1}')
 docker exec -it ${PROTRACTOR_CONTAINER} protractor project/protractor.conf.js
 

@@ -1,6 +1,6 @@
 {
-  "name": "voter-client",
-  "version": "0.0.0",
+  "name": "voterclient",
+  "version": "0.1.0",
   "dependencies": {
     "angular": "^1.4.0",
     "bootstrap": "v4.0.0-alpha.6",
