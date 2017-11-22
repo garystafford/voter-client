@@ -1,7 +1,6 @@
 FROM node:alpine
-LABEL maintainer "Gary A. Stafford <garystafford@rochester.rr.com>"
-ENV REFRESHED_AT 2017-05-20
-EXPOSE 9090
+LABEL maintainer="Gary A. Stafford <garystafford@rochester.rr.com>"
+ENV REFRESHED_AT 2017-11-21
 
 RUN set -x \
   && apk update \
@@ -17,8 +16,8 @@ RUN mkdir client \
   && unzip *.zip
 
 WORKDIR /client/dist
-
 ENV NODE_ENV=production
 RUN npm install --production
+EXPOSE 8080
 
 CMD [ "node", "server.js" ]

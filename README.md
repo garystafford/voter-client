@@ -40,6 +40,13 @@ lar-route.js, angular-sanitize.js, angular-touch.js
 ## Commands
 
 ```bash
+
+# install dependencies
+david
+yarn
+yarn install
+bower install
+
 # fix error with initial generated project
 npm install grunt-karma karma karma-phantomjs-launcher karma-jasmine jasmine-core phantomjs-prebuilt --save-dev
 
@@ -56,7 +63,7 @@ grunt serve
 grunt build && npm start
 
 # uses 'serve-static' for production
-grunt build && cd /dist
+grunt build && cd dist
 node server.js
 
 # local Protractor testing

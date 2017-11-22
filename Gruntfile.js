@@ -23,7 +23,7 @@ module.exports = function(grunt) {
   // Configurable paths for the application
   var appConfig = {
     app: require('./bower.json').appPath || 'app',
-    dist: 'client/dist',
+    dist: 'dist',
     root: '.'
   };
 
@@ -98,7 +98,7 @@ module.exports = function(grunt) {
     // The actual grunt server settings
     connect: {
       options: {
-        port: 9090,
+        port: 8080,
         // Change this to '0.0.0.0' to access the server from outside.
         hostname: 'localhost',
         livereload: 35729

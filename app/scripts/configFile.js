@@ -3,9 +3,8 @@
 
   ng.module('voterClientApp')
     .constant('EnvironmentConfig', {
-      'description': 'Call the Voter Service directly in a local development environment',
-      // 'apiUrl': 'http://api.voter-demo.com',
-      'apiUrl': 'http://gateway',
-      'apiPort': '8080'
+      // 'apiUrl': 'http://localhost',
+      'apiPort': '8080',
+      'apiUrl': 'http://api.voter-demo.com'
     });
 }(window.angular));

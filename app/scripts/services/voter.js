@@ -8,7 +8,7 @@
       return {
         getCandidates: function () {
           var deferred = $q.defer();
-          var httpPromise = $http.get(apiBase + '/voter/candidates/db/election/2016%20Presidential%20Election');
+          var httpPromise = $http.get(apiBase + '/voter/candidates');
 
           httpPromise
             .then(function successCallback(response) {
@@ -77,7 +77,7 @@
         },
 
         postVote: function (candidate) {
-          var candidateChoice = '{ "candidate": "' + candidate.fullName + '", "election": "' + candidate.politicalParty + '" }';
+          var candidateChoice = '{ "candidate": "' + candidate + '" }';
 
           var deferred = $q.defer();
           var httpPromise = $http.post(apiBase + '/voter/votes', candidateChoice);

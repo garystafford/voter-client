@@ -1,17 +1,17 @@
 <div ng-controller="VoterController">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-sm-12 col-md-8">
+      <div class="col-md-auto">
         <h4 class="top15">Voter Client Application</h4>
       </div>
     </div>
     <div class="row top15">
-      <div class="col-sm-8 col-md-4">
+      <div class="col-md-auto">
         <form name="VoterForm">
           <div class="form-group">
             <label for="candidateSelect">Candidate</label>
             <select class="form-control" id="candidateSelect"
-                    ng-options="candidate.fullName for candidate in candidates.data.candidates track by candidate.fullName"
+                    ng-options="candidate for candidate in candidates.data.candidates track by candidate"
                     ng-model="selected">
               <option value="">Select a Candidate...</option>
             </select>
@@ -25,12 +25,12 @@
       </div>
     </div>
     <div class="row top30">
-      <div class="col-sm-8 col-md-4">
+      <div class="col-md-auto">
         <span class="new-vote" ng-show=vote.data.data.candidate>{{(vote.data.data.candidate) ? 'Vote for ' + vote.data.data.candidate + '!' : ''}}</span>
       </div>
     </div>
     <div class="row top30">
-      <div class="col-sm-8 col-md-4">
+      <div class="col-md-auto">
         <h5>Election Results</h5>
         <div>
           <div class="table-responsive">
