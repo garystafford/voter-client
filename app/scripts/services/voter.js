@@ -8,7 +8,7 @@
       return {
         getCandidates: function () {
           var deferred = $q.defer();
-          var httpPromise = $http.get(apiBase + '/voter/candidates/db/election/' + EnvironmentConfig.election);
+          var httpPromise = $http.get(apiBase + '/voter/candidates/http/election/' + EnvironmentConfig.election);
 
           httpPromise
             .then(function successCallback(response) {
@@ -22,7 +22,7 @@
 
         getResults: function () {
           var deferred = $q.defer();
-          var httpPromise = $http.get(apiBase + '/voter/results');
+          var httpPromise = $http.get(apiBase + '/voter/results/' + EnvironmentConfig.election);
 
           httpPromise
             .then(function successCallback(response) {
@@ -36,7 +36,7 @@
 
         getResultsVotes: function () {
           var deferred = $q.defer();
-          var httpPromise = $http.get(apiBase + '/voter/results/votes');
+          var httpPromise = $http.get(apiBase + '/voter/results/' + EnvironmentConfig.election + '/votes');
 
           httpPromise
             .then(function successCallback(response) {
@@ -50,7 +50,7 @@
 
         getWinners: function () {
           var deferred = $q.defer();
-          var httpPromise = $http.get(apiBase + '/voter/winners');
+          var httpPromise = $http.get(apiBase + '/voter/winners/' + EnvironmentConfig.election);
 
           httpPromise
             .then(function successCallback(response) {
@@ -64,7 +64,7 @@
 
         getWinnersVotes: function () {
           var deferred = $q.defer();
-          var httpPromise = $http.get(apiBase + '/voter/winners/votes');
+          var httpPromise = $http.get(apiBase + '/voter/winners/' + EnvironmentConfig.election + '/votes');
 
           httpPromise
             .then(function successCallback(response) {
