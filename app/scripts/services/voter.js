@@ -8,7 +8,7 @@
       return {
         getCandidates: function () {
           var deferred = $q.defer();
-          var httpPromise = $http.get(apiBase + '/voter/candidates');
+          var httpPromise = $http.get(apiBase + '/voter/candidates/db/election/' + EnvironmentConfig.election);
 
           httpPromise
             .then(function successCallback(response) {
@@ -77,8 +77,7 @@
         },
 
         postVote: function (candidate) {
-          var candidateChoice = '{ "candidate": "' + candidate + '" }';
-
+          var candidateChoice = '{ "candidate": "' + candidate.fullName + '", "election": "' + EnvironmentConfig.election + '" }';
           var deferred = $q.defer();
           var httpPromise = $http.post(apiBase + '/voter/votes', candidateChoice);
 

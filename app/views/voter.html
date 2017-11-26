@@ -11,7 +11,7 @@
           <div class="form-group">
             <label for="candidateSelect">Candidate</label>
             <select class="form-control" id="candidateSelect"
-                    ng-options="candidate for candidate in candidates.data.candidates track by candidate"
+                    ng-options="(candidate.fullName + ' (' + candidate.politicalParty + ')') for candidate in candidates.data.candidates track by candidate.fullName"
                     ng-model="selected">
               <option value="">Select a Candidate...</option>
             </select>
