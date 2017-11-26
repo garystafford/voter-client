@@ -9,13 +9,14 @@
   'use strict';
 
   ng.module('voterClientApp')
-    .controller('VoterController', ['$scope', 'VoterService', function ($scope, VoterService) {
+    .controller('VoterController', ['$scope', 'VoterService', 'EnvironmentConfig', function ($scope, VoterService, EnvironmentConfig) {
       $scope.candidates;
       $scope.vote;
       $scope.results;
       $scope.resultsCount;
       $scope.winners;
       $scope.winnersVotes;
+      $scope.title;
 
       $scope.getCandidates = function () {
         VoterService.getCandidates()
@@ -84,6 +85,7 @@
       };
 
       $scope.$on('$viewContentLoaded', function () {
+        $scope.title = EnvironmentConfig.election;
         $scope.getCandidates();
         $scope.GetResults();
         $scope.getResultsVotes();
