@@ -8,6 +8,7 @@
 
 #set -x
 
+SERVICE_NAME=${1:-voter}
 BRANCH=${2:-rabbitmq}
 
 cd client/
@@ -28,10 +29,7 @@ docker login -u="${DOCKER_USERNAME}" -p="${DOCKER_PASSWORD}"
 set -ex
 
 sleep 120 # wait for automated Docker Hub build to finish...
-IMAGE="garystafford/voter-client"
-docker build -t ${IMAGE}:${BRANCH} .
-docker push ${IMAGE}:${BRANCH}
-
+IMAGE="garystafford/${SERVICE_NAME}-client"
 IMAGE_TAG="0.4.${TRAVIS_BUILD_NUMBER}"
-docker tag ${IMAGE}:${BRANCH} ${IMAGE}:${IMAGE_TAG}
-docker push ${IMAGE}:${IMAGE_TAG}
+docker build -t ${IMAGE}:${BRANCH}-${IMAGE_TAG} .
+docker push ${IMAGE}:${BRANCH}-${IMAGE_TAG}
