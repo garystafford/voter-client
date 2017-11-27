@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b1817b17-8f8d-408a-bbe6-7e6519d24e97" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/services/voter.js" afterPath="$PROJECT_DIR$/app/scripts/services/voter.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/configFile.js" afterPath="$PROJECT_DIR$/app/scripts/configFile.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -26,21 +26,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="configFile.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="configFile.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/scripts/configFile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="45" lean-forward="false" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="voter.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/scripts/services/voter.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1210">
-              <caret line="10" column="71" lean-forward="false" selection-start-line="10" selection-start-column="71" selection-end-line="10" selection-end-column="71" />
+            <state relative-caret-position="85">
+              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -134,10 +124,10 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/Gruntfile.js" />
-        <option value="$PROJECT_DIR$/app/scripts/configFile.js" />
         <option value="$PROJECT_DIR$/app/scripts/controllers/voter.js" />
         <option value="$PROJECT_DIR$/app/views/voter.html" />
         <option value="$PROJECT_DIR$/app/scripts/services/voter.js" />
+        <option value="$PROJECT_DIR$/app/scripts/configFile.js" />
       </list>
     </option>
   </component>
@@ -438,7 +428,7 @@
       <workItem from="1507310847943" duration="3724000" />
       <workItem from="1511325389926" duration="279000" />
       <workItem from="1511325751933" duration="3793000" />
-      <workItem from="1511709780708" duration="7446000" />
+      <workItem from="1511709780708" duration="8662000" />
     </task>
     <servers />
   </component>
@@ -457,7 +447,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="93777000" />
+    <option name="totallyTimeSpent" value="94993000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -787,18 +777,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/configFile.js">
+    <entry file="file://$PROJECT_DIR$/app/scripts/services/voter.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="45" lean-forward="false" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="45" />
+        <state relative-caret-position="-88">
+          <caret line="10" column="71" lean-forward="false" selection-start-line="10" selection-start-column="71" selection-end-line="10" selection-end-column="71" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/services/voter.js">
+    <entry file="file://$PROJECT_DIR$/app/scripts/configFile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1210">
-          <caret line="10" column="71" lean-forward="false" selection-start-line="10" selection-start-column="71" selection-end-line="10" selection-end-column="71" />
+        <state relative-caret-position="85">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
         </state>
       </provider>
