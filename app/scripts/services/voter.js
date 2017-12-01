@@ -8,7 +8,7 @@
       return {
         getCandidates: function () {
           var deferred = $q.defer();
-          var httpPromise = $http.get(apiBase + '/voter/candidates/http/' + EnvironmentConfig.election);
+          var httpPromise = $http.get(apiBase + '/voter/candidates/' + EnvironmentConfig.election);
 
           httpPromise
             .then(function successCallback(response) {
