@@ -9,7 +9,7 @@
 #set -x
 
 SERVICE_NAME=${1:-voter}
-BRANCH=${2:-rabbitmq}
+BRANCH=${2:-kub-aks}
 
 cd client/
 zip -r dist-voter-client-0.4.${TRAVIS_BUILD_NUMBER}.zip dist/
@@ -20,7 +20,7 @@ git config user.email "${COMMIT_AUTHOR_EMAIL}"
 
 git add *.zip
 git commit -m "Deploy Travis CI Build #${TRAVIS_BUILD_NUMBER} artifacts to GitHub"
-git push --force --quiet "https://${GH_TOKEN}@${GH_ARTIFACT_REPO}" master:build-artifacts
+git push --force --quiet "https://${GH_TOKEN}@${GH_ARTIFACT_REPO}" master:build-artifacts-kub-aks
 
 # Builds immutable Docker Image, deploying the ZIP, above.
 cd -
@@ -30,6 +30,6 @@ set -ex
 
 sleep 120 # wait for automated Docker Hub build to finish...
 IMAGE="garystafford/${SERVICE_NAME}-client"
-IMAGE_TAG="0.4.${TRAVIS_BUILD_NUMBER}"
+IMAGE_TAG="0.5.${TRAVIS_BUILD_NUMBER}"
 docker build -t ${IMAGE}:${BRANCH}-${IMAGE_TAG} .
 docker push ${IMAGE}:${BRANCH}-${IMAGE_TAG}
