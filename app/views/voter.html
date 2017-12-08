@@ -1,12 +1,12 @@
 <div ng-controller="VoterController">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-auto">
+      <div class="col-sm-12 col-md-8">
         <h4 class="top15">{{ title }}</h4>
       </div>
     </div>
     <div class="row top15">
-      <div class="col-md-auto">
+      <div class="col-sm-8 col-md-4">
         <form name="VoterForm">
           <div class="form-group">
             <label for="candidateSelect">Candidate</label>
@@ -25,12 +25,12 @@
       </div>
     </div>
     <div class="row top30">
-      <div class="col-md-auto">
+      <div class="col-sm-8 col-md-4">
         <span class="new-vote" ng-show=vote.data.data.candidate>{{(vote.data.data.candidate) ? 'Vote for ' + vote.data.data.candidate + '!' : ''}}</span>
       </div>
     </div>
     <div class="row top30">
-      <div class="col-md-auto">
+      <div class="col-sm-8 col-md-4">
         <h5>Election Results</h5>
         <div>
           <div class="table-responsive">
