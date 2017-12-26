@@ -3,12 +3,12 @@
 
   ng.module('voterClientApp')
     .factory('VoterService', ['$q', '$http', 'EnvironmentConfig', function ($q, $http, EnvironmentConfig) {
-      var apiBase = EnvironmentConfig.apiUrl + ':' + EnvironmentConfig.apiPort;
+      var apiBase = EnvironmentConfig.apiUrl;
 
       return {
         getCandidates: function () {
           var deferred = $q.defer();
-          var httpPromise = $http.get(apiBase + '/voter/candidates/http/' + EnvironmentConfig.election);
+          var httpPromise = $http.get(apiBase + '/voter/candidates/' + EnvironmentConfig.election);
 
           httpPromise
             .then(function successCallback(response) {
