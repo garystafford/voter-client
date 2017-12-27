@@ -35,7 +35,7 @@ export class AppComponent implements OnInit {
     this.getWinningVotes();
   }
 
-  private electionChange(electionChoice: string): void {
+  electionChange(electionChoice: string): void {
     if (this.currentElection !== electionChoice) {
       this.currentElection = electionChoice;
     }
@@ -131,7 +131,7 @@ export class AppComponent implements OnInit {
         });
   }
 
-  private postVote(candidateChoice: string): void {
+  postVote(candidateChoice: string): void {
     const headers = new HttpHeaders({'Content-Type': 'application/json'});
     this.vote.candidate = candidateChoice;
     this.vote.election = this.currentElection;

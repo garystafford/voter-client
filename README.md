@@ -54,16 +54,9 @@ yarn
  6. Transpile and run continuously in development
  
  ```bash
- ng serve --open --dev # local
- ng serve --open --dev --env=prod # Azure/Atlas
+ ng serve --open --dev
+ ng serve --open --dev --env=prod
  ```
  
- 7. Build for Development
- 
- ```bash
- ng build --env=prod # local
- ng build --env=prod # Azure/Atlas
- ```
- 
- 8. Build for Production<br>
+ 7. Build for Production<br>
    `ng build --prod --env=prod`
