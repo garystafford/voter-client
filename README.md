@@ -94,5 +94,7 @@ docker exec -it ${PROTRACTOR_CONTAINER} protractor project/protractor.conf.js
 grunt sonarRunner
 ```
 
+## Voter API Architecture
+
 ![gke_ampq_v1.png](pics/gke_ampq_v1.png)
 
