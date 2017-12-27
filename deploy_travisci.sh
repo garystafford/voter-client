@@ -11,6 +11,9 @@
 SERVICE_NAME=${1:-voter}
 BRANCH=${2:-angular}
 
+yarn
+ng build --prod --env=prod
+
 mkdir tmp
 mv dist/ tmp/
 cd tmp/

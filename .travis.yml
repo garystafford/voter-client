@@ -7,9 +7,7 @@ before_install:
 - sudo apt-get install -y zip
 install:
 - npm install -g yarn
-- yarn
 script:
-- ng build --prod --env=prod
 - sh ./deploy_travisci.sh
 env:
   global:
