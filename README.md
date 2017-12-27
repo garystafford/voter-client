@@ -35,7 +35,7 @@ yarn
 ```
  
  2. Install the Angular CLI globally<br>
-   `yarn global add @angular/cli`
+   `git statu
  
  3. Install Bootstrap into the project<br>
  `yarn add bootstrap@4.0.0-beta.2`
