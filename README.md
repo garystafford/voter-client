@@ -1,5 +1,13 @@
-# voter-client
+# Voter API Client
 
+Simple AngularJS application, used to demonstrate the Voter API.
+
+![mobile_iphone_new2.png](pics/mobile_iphone_new2.png)
+
+  
+![gke_ampq_v1.png](pics/gke_ampq_v1.png)
+
+## Yeoman
 This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
 version 0.16.0.
 
