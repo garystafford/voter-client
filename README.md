@@ -1,100 +1,69 @@
-# Voter API Client
+# VoterClient
 
-Simple AngularJS application, used to demonstrate the Voter API.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.2.
 
-![mobile_iphone_new2.png](pics/mobile_iphone_new2.png)
+## Development server
 
-## Yeoman
-This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
-version 0.16.0.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Build & development
+## Code scaffolding
 
-Run `grunt` for building and `grunt serve` for preview.
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Testing
+## Build
 
-Running `grunt test` will run the unit tests with karma.
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 
-## Installation
+## Running unit tests
 
-```text
-# https://github.com/yeoman/generator-angular#readme
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-yo angular voter-client
+## Running end-to-end tests
 
-     _-----_
-    |       |    ╭──────────────────────────╮
-    |--(o)--|    │    Welcome to Yeoman,    │
-   `---------´   │   ladies and gentlemen!  │
-    ( _´U`_ )    ╰──────────────────────────╯
-    /___A___\   /
-     |  ~  |
-   __'.___.'__
- ´   `  |° ´ Y `
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-Out of the box I include Bootstrap and some AngularJS recommended modules.
+## Further help
 
-? Would you like to use Gulp (experimental) instead of Grunt? No
-? Would you like to use Sass (with Compass)? No
-? Would you like to include Bootstrap? Yes
-? Which modules would you like to include? (Press <space> to select, <a> to toggle all, <i> to inverse selection)angular-animate.js, angular-cookies.js, angular-resource.js, angu
-lar-route.js, angular-sanitize.js, angular-touch.js
-```
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
-## Commands
-
+ ## Project Setup and Run Notes
+ 
+ 1. Download and install Yarn<br>
 ```bash
-
-# install dependencies
-david
+npm install -g yarn
 yarn
-yarn install
-bower install
-
-# fix error with initial generated project
-npm install grunt-karma karma karma-phantomjs-launcher karma-jasmine jasmine-core phantomjs-prebuilt --save-dev
-
-# create components
-yo angular:route voter
-yo angular:service voter
-
-grunt
-
-# uses 'serve-static' for development
-grunt serve
-
-# uses 'aliv' for development
-grunt build && npm start
-
-# uses 'serve-static' for production
-grunt build && cd dist
-node server.js
-
-# local Protractor testing
-webdriver-manager start # first terminal window
-protractor protractor.conf.js # second terminal window
-
-# for Protractor with Docker
-# https://github.com/SeleniumHQ/docker-selenium
-
-# install selenium stack
-PROJECT_PATH="/Users/garystafford/Documents/projects/voter-services/voter-client" \
-  && sh stack_deploy_local.sh ${PROJECT_PATH}
-
-# run protractor tests from within protractor container
-# against running voter client in another container (tests running app)
-PROTRACTOR_CONTAINER=$(docker ps | grep protractor | awk '{print $1}')
-docker exec -it ${PROTRACTOR_CONTAINER} protractor project/protractor.conf.js
-
-# http://localhost:4444/grid/console?config=true&configDebug=true
-# http://localhost:4444/grid/console
-
-# SonarQube SCA
-grunt sonarRunner
 ```
-
-## Voter API Architecture
-
-![gke_ampq_v1.png](pics/gke_ampq_v1.png)
-
+ 
+ 2. Install the Angular CLI globally<br>
+   `yarn global add @angular/cli`
+ 
+ 3. Install Bootstrap into the project<br>
+ `yarn add bootstrap@4.0.0-beta.2`
+ 
+ 4. Install `ng-bootstrap` into the project<br>
+   `yarn add @ng-bootstrap/ng-bootstrap`
+ 
+ 5. Update dependencies (_optional_)
+ 
+ ```bash
+ yarn global add david
+ david update
+ yarn add typescript@'>=2.4.2 <2.6' --save-dev
+ ```
+ 
+ 6. Transpile and run continuously in development
+ 
+ ```bash
+ ng serve --open --dev # local
+ ng serve --open --dev --env=prod # Azure/Atlas
+ ```
+ 
+ 7. Build for Development
+ 
+ ```bash
+ ng build --env=prod # local
+ ng build --env=prod # Azure/Atlas
+ ```
+ 
+ 8. Build for Production<br>
+   `ng build --prod --env=prod`

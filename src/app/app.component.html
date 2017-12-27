@@ -1,0 +1,68 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12 col-md-8">
+      <h4 class="top15">{{title}}</h4>
+    </div>
+  </div>
+  <div class="row top15">
+    <div class="col-sm-8 col-md-4">
+      <form name="VoterForm">
+        <div class="form-group">
+          <label for="candidateSelect">Election</label>
+          <select class="form-control" id="electionSelect" (change)="electionChange(electionSelect.value)"
+                  #electionSelect>
+            <option value="">Select a Election...</option>
+            <option *ngFor="let election of elections" value="{{election.title}}">{{election.title}}
+          </select>
+          <label class="top20" for="candidateSelect">Candidate</label>
+          <select class="form-control" id="candidateSelect" #candidateSelect>
+            <option value="">Select a Candidate...</option>
+            <option *ngFor="let candidate of candidates" value="{{candidate.fullName}}">{{candidate.fullName + ' (' +
+              candidate.politicalParty + ')'}}
+          </select>
+          <button class="top20 btn btn-primary" (click)="postVote(candidateSelect.value)">
+            Vote!
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="row top15">
+    <div class="col-sm-8 col-md-4">
+      <span id="votedFor" class="new-vote">{{(vote.candidate) ? 'Vote for ' + vote.candidate + '!' : ''}}</span>
+    </div>
+  </div>
+  <div class="row top20">
+    <div class="col-sm-8 col-md-4">
+      <h5>Election Results</h5>
+      <div>
+        <div class="table-responsive">
+          <table class="table table-bordered table-striped table-sm">
+            <thead>
+            <tr>
+              <th class="text-sm-center">#</th>
+              <th class="text-sm-center">Candidate</th>
+              <th class="text-sm-center">Votes</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let result of results; let i = index"
+                [ngClass]="{'winners': result.votes == winningVotes, 'new-vote': result.candidate == vote.candidate}">
+              <td class="text-sm-center">{{i+1}}</td>
+              <td>{{result.candidate}}</td>
+              <td class="text-sm-right">{{result.votes}}</td>
+            </tr>
+            </tbody>
+            <tfoot class="total">
+            <td class="text-sm-right" colspan="2">Total</td>
+            <td id="total-votes" class="text-sm-right"><span>{{totalVotes}}</span></td>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="top15 bottom15">
+    <small><a href="https://programmaticponderings.com/">Programmatic Ponderings</a> - 2018</small>
+  </div>
+</div>

@@ -1,67 +1,51 @@
 {
-  "name": "voterclient",
-  "version": "0.4.0",
-  "main": "app.js",
-  "devDependencies": {
-    "aliv": "^1.2.0",
-    "async": "^2.4.0",
-    "autoprefixer-core": "^6.0.1",
-    "grunt": "^1.0.1",
-    "grunt-angular-templates": "^1.1.0",
-    "grunt-concurrent": "^2.3.1",
-    "grunt-contrib-clean": "^1.1.0",
-    "grunt-contrib-concat": "^1.0.1",
-    "grunt-contrib-connect": "^1.0.2",
-    "grunt-contrib-copy": "^1.0.0",
-    "grunt-contrib-cssmin": "^2.2.0",
-    "grunt-contrib-htmlmin": "^2.4.0",
-    "grunt-contrib-imagemin": "^2.0.1",
-    "grunt-contrib-jshint": "^1.1.0",
-    "grunt-contrib-uglify": "^3.0.0",
-    "grunt-contrib-watch": "^1.0.0",
-    "grunt-filerev": "^2.1.2",
-    "grunt-google-cdn": "^0.4.3",
-    "grunt-jscs": "^3.0.1",
-    "grunt-karma": "^2.0.0",
-    "grunt-newer": "^1.1.0",
-    "grunt-ng-annotate": "^3.0.0",
-    "grunt-postcss": "^0.9.0",
-    "grunt-sonar-runner": "^2.4.8",
-    "grunt-svgmin": "^4.0.0",
-    "grunt-usemin": "^3.0.0",
-    "grunt-wiredep": "^3.0.1",
-    "jasmine-core": "^2.6.1",
-    "jit-grunt": "^0.10.0",
-    "jshint-stylish": "^2.2.1",
-    "karma": "^1.7.0",
-    "karma-chrome-launcher": "^2.1.1",
-    "karma-jasmine": "^1.1.0",
-    "karma-phantomjs-launcher": "^1.0.4",
-    "phantomjs-prebuilt": "^2.1.14",
-    "request": "^2.81.0",
-    "request-json": "^0.6.2",
-    "time-grunt": "^1.0.0",
-    "jscs": "^3.0.7"
-  },
-  "scripts": {
-    "start": "aliv",
-    "test": "karma start test/karma.conf.js"
-  },
-  "dependencies": {
-    "express": "^4.14.0",
-    "serve-static": "^1.11.1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/garystafford/voter-client.git"
-  },
-  "author": "Gary A. Stafford <garystafford@rochester.rr.com>",
+  "name": "voter-client",
+  "version": "0.0.0",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/garystafford/voter-client/issues"
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build --prod",
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e"
   },
-  "homepage": "https://github.com/garystafford/voter-client",
-  "engines": {
-    "node": "8.x"
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "^5.0.0",
+    "@angular/common": "^5.0.0",
+    "@angular/compiler": "^5.0.0",
+    "@angular/core": "^5.0.0",
+    "@angular/forms": "^5.0.0",
+    "@angular/http": "^5.1.2",
+    "@angular/platform-browser": "^5.0.0",
+    "@angular/platform-browser-dynamic": "^5.0.0",
+    "@angular/router": "^5.0.0",
+    "@ng-bootstrap/ng-bootstrap": "^1.0.0-beta.8",
+    "bootstrap": "4.0.0-beta.2",
+    "core-js": "^2.4.1",
+    "rxjs": "^5.5.2",
+    "zone.js": "^0.8.14"
+  },
+  "devDependencies": {
+    "@angular/cli": "1.6.2",
+    "@angular/compiler-cli": "^5.0.0",
+    "@angular/language-service": "^5.0.0",
+    "@types/jasmine": "^2.8.2",
+    "@types/jasminewd2": "~2.0.2",
+    "@types/node": "^8.5.2",
+    "codelyzer": "^4.0.1",
+    "jasmine-core": "^2.8.0",
+    "jasmine-spec-reporter": "^4.2.1",
+    "karma": "^2.0.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-cli": "~1.0.1",
+    "karma-coverage-istanbul-reporter": "^1.2.1",
+    "karma-jasmine": "~1.1.0",
+    "karma-jasmine-html-reporter": "^0.2.2",
+    "protractor": "^5.2.2",
+    "ts-node": "^4.1.0",
+    "tslint": "^5.8.0",
+    "typescript": ">=2.4.2 <2.6"
   }
 }

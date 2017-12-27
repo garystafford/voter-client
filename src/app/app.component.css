@@ -1,0 +1,57 @@
+.spacer {
+  margin-left: 12px;
+}
+
+.top5 {
+  margin-top: 5px;
+}
+
+.top10 {
+  margin-top: 10px;
+}
+
+.top15 {
+  margin-top: 15px;
+}
+
+.top20 {
+  margin-top: 20px;
+}
+
+.top60 {
+  margin-top: 60px;
+}
+
+.bottom5 {
+  margin-bottom: 5px;
+}
+
+.bottom10 {
+  margin-bottom: 10px;
+}
+
+.bottom15 {
+  margin-bottom: 15px;
+}
+
+.bottom20 {
+  margin-bottom: 20px;
+}
+
+.new-vote {
+  color: green;
+}
+
+.winners {
+  font-weight: bold;
+}
+
+.total {
+  font-weight: bold;
+  background: #666666;
+  color: white;
+}
+
+label {
+  font-weight: bold;
+}
