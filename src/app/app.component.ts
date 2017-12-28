@@ -47,12 +47,11 @@ export class AppComponent implements OnInit {
 
   private getElections(): void {
     const headers = new HttpHeaders({'Content-Type': 'application/json'});
-    this.http.get<any[]>(`${environment.apiUrl}/election/elections`,
+    this.http.get<any[]>(`${environment.apiUrl}/election/summary`,
       {headers: headers, observe: 'response'})
       .retry(1)
       .subscribe(res => {
-          const elections = (Object.values(res.body))[0];
-          this.elections = (Object.values(elections)[0]);
+          this.elections = (Object.values(res.body)[0]);
         },
         (err: HttpErrorResponse) => {
           if (err.error instanceof Error) {

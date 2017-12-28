@@ -4,17 +4,17 @@
       <h4 class="top15">{{title}}</h4>
     </div>
   </div>
-  <div class="row top15">
-    <div class="col-sm-8 col-md-4">
+  <div class="row top10">
+    <div class="col-sm-8 col-md-3">
       <form name="VoterForm">
         <div class="form-group">
           <label for="candidateSelect">Election</label>
           <select class="form-control" id="electionSelect" (change)="electionChange(electionSelect.value)"
                   #electionSelect>
             <option value="">Select a Election...</option>
-            <option *ngFor="let election of elections" value="{{election.title}}">{{election.title}}
+            <option *ngFor="let election of elections" value="{{election}}">{{election}}
           </select>
-          <label class="top20" for="candidateSelect">Candidate</label>
+          <label class="top10" for="candidateSelect">Candidate</label>
           <select class="form-control" id="candidateSelect" #candidateSelect>
             <option value="">Select a Candidate...</option>
             <option *ngFor="let candidate of candidates" value="{{candidate.fullName}}">{{candidate.fullName + ' (' +
@@ -27,13 +27,13 @@
       </form>
     </div>
   </div>
-  <div class="row top15">
-    <div class="col-sm-8 col-md-4">
+  <div class="row top10">
+    <div class="col-sm-8 col-md-3">
       <span id="votedFor" class="new-vote">{{(vote.candidate) ? 'Vote for ' + vote.candidate + '!' : ''}}</span>
     </div>
   </div>
   <div class="row top20">
-    <div class="col-sm-8 col-md-4">
+    <div class="col-sm-8 col-md-3">
       <h5>Election Results</h5>
       <div>
         <div class="table-responsive">
@@ -62,7 +62,7 @@
       </div>
     </div>
   </div>
-  <div class="top15 bottom15">
+  <div class="to5 bottom15">
     <small><a href="https://programmaticponderings.com/">Programmatic Ponderings</a> - 2018</small>
   </div>
 </div>
