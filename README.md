@@ -1,5 +1,13 @@
 # Voter Client
 
+Angular 5 application, used to demonstrate the [Voter API](https://github.com/garystafford/gke-istio-atlas-rabbit-demo).
+
+
+![Chrome Mobile Preview](VoterClientAngular5_small.png)
+
+
+## Angular CLI
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.2.
 
 ## Development server
@@ -26,9 +34,10 @@ Run`ng e2e` to execute the end-to-end tests via [Protractor](http://www.protract
 
 To get more help on the Angular CLI use`ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
- ## Project Setup and Run Notes
+ ## Project setup and run notes
 
- 1. Download and install Yarn<br>
+ 1. Download and install Yarn
+
 ```bash
 npm install -g yarn
 yarn
@@ -40,14 +49,7 @@ yarn
 yarn global add @angular/cli
 ```
  
- 3. Install Bootstrap into the project
-
-```bash
-yarn add bootstrap@4.0.0-beta.2
-yarn add @ng-bootstrap/ng-bootstrap
-```
- 
- 4. Update dependencies (_optional_)
+ 3. Update dependencies (_optional_)
 
 ```bash
  yarn global add david
@@ -55,14 +57,14 @@ yarn add @ng-bootstrap/ng-bootstrap
  yarn add typescript@'>=2.4.2 <2.6' --save-dev
 ```
  
- 5. Transpile and run continuously in development
+ 4. Transpile and run continuously in development
 
 ```bash
  ng serve --open --dev
  ng serve --open --dev --env=prod
 ```
  
- 6. Build for Production
+ 5. Build for Production
 
 ```bash
  ng build --prod --env=prod
