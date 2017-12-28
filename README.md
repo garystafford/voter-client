@@ -67,3 +67,7 @@ yarn add @ng-bootstrap/ng-bootstrap
 ```bash
  ng build --prod --env=prod
 ```
+
+## Docker
+
+The project includes a Dockerfile, based on the `nginx:1.13.8-alpine` base image. The Voter API Client Docker Image is available on Docker Hub. The latest image is `garystafford/voter-client:angular-0.6.70`.
